@@ -1,0 +1,329 @@
+/*======================================== ROOT STYLES ======================================*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+:root{
+    --primary-color: #05822b;
+    --secondary-color: #0911e8;
+    --extra-color: #ffcccd;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*=================================== NAVBAR STYLES STARTS HERE ==================================*/
+.brand-logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.navbar{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 3px 15px 1px rgba(0,0,0,0.57);
+
+}
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 10px;
+    text-align: center;
+}
+.navbar-container ul{
+    list-style: none;
+    display: flex;
+    text-align: center;
+}
+.navbar-container ul li{
+    margin: 20px 20px;
+    text-align: center;
+    font-size: 15px;
+}
+.navbar-container ul li a:hover{
+    color: var(--primary-color);
+}
+.navbar-container a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.nav-left{
+    flex: 1;
+    margin-left: 20px;
+}
+.nav-left li{
+    text-transform: uppercase;
+    align-items: center;
+    text-align: center;
+}
+.nav-right{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.nav-right li{
+    text-transform: capitalize;
+    align-items: center;
+}
+.navbar-container .btn-light-outline{
+    background: transparent;
+    border: 1px solid #000;
+}
+/*======================================= NAVBAR STYLES ENDS HERE ===========================*/
+
+
+/* ====================================== BUTTONS STYLES ====================================== */
+.btn{
+    padding: 5px 10px;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    text-transform: capitalize;
+    background: transparent;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+.btn-dark{
+    background: #000;
+    color: #fff;
+}
+.btn-dark:hover{
+    transition: 1s ease;
+    background: rgb(228, 225, 225);
+    color: #000;
+}
+.btn-light-outline:hover{
+    transition: 1s ease;
+    opacity: 0.6;
+}
+.btn-light-outline{
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+/*============================= BOX STYLES START HERE ==============================*/
+.box{
+    display: grid;
+    margin: 30px 0px;
+    
+}
+.primary-bg{
+    background: var(--extra-color);
+    
+}
+.primary-bg .btn{
+    background: #fff;
+    color: #000;
+}
+.secondary-bg{
+    background: var(--secondary-color);
+    color: #fff;
+}
+.extra-bg{
+    background: var(--primary-color);
+    color: #fff;
+}
+.box-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+.box a{
+    color: #fff;
+    margin-top: 20px;
+}
+.box a:hover{
+    color: #fff;
+}
+.box-page{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 10px;
+}
+.box-page p{
+    margin-top: 40px;
+    line-height: 25px;
+    font-weight: 500;
+}
+.box-page a{
+    text-decoration: underline;
+}
+/*================================== BOX STYLES ENDS HERE =====================================*/
+
+/*=================================== GRID STYLES ==============================================*/
+.grid-col-2{
+    grid-template-columns: repeat(2,1fr);
+}
+.reversed:first-child{
+    order: 2;
+}
+/* ======================================== GRID STYLES =========================================*/
+
+/* ========================================= FONTS STYLES STARTS HERE ================================*/
+.text-sm{
+    font-size: 26px;
+    padding: 10px 10px;
+}
+.text-xl{
+    font-size: 50px;
+}
+.sm{
+    line-height: 30px;
+    padding: 10px 10px;
+    font-weight: 500;
+}
+.xl{
+    font-size: 25px;
+    font-weight: bold;
+}
+/* ============================================= FONTS STYLES ENDS HERE ==================================*/
+
+@media (max-width: 1018px){
+    .box{
+        display: grid;
+        margin: 30px 0px; 
+    }
+    .box img{
+        width: 100%;
+    }
+    .grid-col-2{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .box-text{
+        height: 400px;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0;
+        top: 70px;
+        height: 350px;
+        width: 50%;
+        display: none;
+        text-align: center;
+        justify-content: center;
+        background: #fff;
+        border-bottom-left-radius: 5px;
+    }
+    .nav-links ul{
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+    .show-links{
+        position: absolute;
+        right: 0;
+        top: 70px;
+        height: 350px;
+        width: 50%;
+        display: block;
+        text-align: center;
+        justify-content: center;
+        background: #fff;
+        border-bottom-left-radius: 5px;
+        transition: all 0.5s ease-out;
+    }
+    .nav-links ul{
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+    .text-sm{
+        font-size: 22px;
+        padding: 10px 10px;
+    }
+    .text-xl{
+        font-size: 35px;
+    }
+    .sm{
+        line-height: 30px;
+        padding: 10px 10px;
+        font-weight: 500;
+    }
+    .xl{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .box a{
+        color: #fff;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 1134px){
+    .navbar{
+        font-size: 35px;
+    }
+}
+
+/*======================================= FOOTER STYLES =======================================*/
+.divider{
+    width: 90%;
+    margin: auto;
+    opacity: 0.2;
+    margin: 30px;
+    border-top: 2px solid black;
+}
+.footer-container{
+    width: 80%;
+    text-align: left;
+    margin-left: 50px;
+}
+.social-links{
+    margin: 10px 10px;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    margin: 30px 10px;
+    cursor: pointer;
+}
+.social-links a{
+    width: 30px;
+    height: 30px;
+    padding: 10px 3px;
+    color: #000;
+}
+.footer-links ul{
+    list-style: none;
+}
+.footer-links ul li{
+    margin: 20px 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.footer-links ul li a:hover{
+    text-decoration: underline;
+}
+
+@media (min-width: 1019px){
+    .menu-btn{
+        display: none;
+    }
+}
